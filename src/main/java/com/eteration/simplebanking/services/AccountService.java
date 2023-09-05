@@ -52,32 +52,6 @@ public class AccountService {
                 .build();
         return accountDto;
     }
-    /*public ResponseEntity<TransactionStatus> credit(String accountNumber, DepositTransaction depositTransaction) {
-        //Account account = accountRepository.findByAccountNumber(accountNumber).orElseThrow(() -> {throw new InsufficientBalanceException(ErrorType.ACCOUNT_NOT_FOUND);});
-        Account account = findAccount(accountNumber);
-        account.post(new DepositTransaction(depositTransaction.getAmount())); //account balance increase
-        transactionService.save(depositTransaction);
-        return ResponseEntity.ok(new TransactionStatus("OK", depositTransaction.getApprovalCode()));
-    }*/
-
-    /*public TransactionStatus debit(String accountNumber, Double amount) {
-        //Account account = accountRepository.findByAccountNumber(accountNumber).orElseThrow(() -> {throw new InsufficientBalanceException(ErrorType.ACCOUNT_NOT_FOUND);});
-        Account account = findAccount(accountNumber);
-        Transaction withdrawTransaction = new WithdrawalTransaction(amount);
-        account.post(withdrawTransaction); //account balance decrease
-        transactionService.save(withdrawTransaction);
-        return new TransactionStatus("OK", withdrawTransaction.getApprovalCode());
-    }*/
-
-    /*public TransactionStatus phoneBillPayment(String accountNumber, Double amount) {
-        Account account = accountRepository.findByAccountNumber(accountNumber).orElseThrow(() -> {
-            throw new InsufficientBalanceException(ErrorType.ACCOUNT_NOT_FOUND);
-        });
-        Transaction phoneBillPaymentTransaction = new PhoneBillPaymentTransaction(amount);
-        account.post(phoneBillPaymentTransaction); //account balance decrease
-        transactionService.save(phoneBillPaymentTransaction);
-        return new TransactionStatus("OK", phoneBillPaymentTransaction.getApprovalCode());
-    }*/
 }
 
 
