@@ -20,6 +20,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String owner;
+    @Column(unique = true)
     private String accountNumber;
     @Builder.Default
     private LocalDateTime createDate = LocalDateTime.now();
