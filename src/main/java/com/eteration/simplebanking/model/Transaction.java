@@ -30,9 +30,6 @@ public abstract class Transaction {
     @JsonIgnore
     private Account account;
 
-  /*  @OneToOne(cascade = CascadeType.ALL, mappedBy = "transaction")
-    @JsonIgnore
-    private Payment payment;*/
 
     public Transaction(Double amount, String type) {
         this.amount = amount;
