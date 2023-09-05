@@ -22,11 +22,10 @@ public class Payment {
     private Long id;
     private String phone;
     private String payee;
-    /*@ManyToOne(cascade = CascadeType.ALL)
-    @JsonIgnore
-    private Account account;*/
+    
     @OneToOne(cascade = CascadeType.ALL)
     private WithdrawalTransaction transaction;
+    
     public Payment(Double amount, String phone, String type, String payee) {
         this.phone = phone;
         this.transaction = new WithdrawalTransaction(amount);
